@@ -1,0 +1,92 @@
+.video-recorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-preview-container {
+  margin-bottom: 20px;
+}
+
+.video-preview {
+  width: 60vw;
+  height: auto;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.start-button,
+.stop-button,
+.pause-button,
+.resume-button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.start-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+}
+
+.stop-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.pause-button,
+.resume-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  width: 100px;
+}
+
+.recorded-video {
+  margin-top: 20px;
+  width: 60vw;
+}
+
+.download-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.permission-error {
+  color: red;
+  margin-top: 20px;
+}
+
+.delete-button {
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+}
+
+.timing {
+  background-color: lightgray;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.timing .time-elapsed {
+  font-weight: bold;
+  color: green;
+}
+
+.timing .time-total {
+  font-weight: bold;
+}
