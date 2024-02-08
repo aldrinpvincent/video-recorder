@@ -41,7 +41,7 @@ const VideoRecorder: React.FC = () => {
         mediaRecorderRef.current.stop();
         previewRef.current.srcObject
           .getTracks()
-          .forEach((track) => track.stop());
+          .forEach((track: any) => track.stop());
         setRecording(false);
         clearInterval(recordingIntervalRef.current!);
         setRecordingTime(0);
