@@ -8,7 +8,7 @@ const VideoRecorder: React.FC = () => {
   const [paused, setPaused] = useState<boolean>(false);
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   const [recordingTime, setRecordingTime] = useState<number>(0);
-  const [permissionError, setPermissionError] = useState(false);
+  const [permissionError, setPermissionError] = useState(true);
 
   const previewRef = useRef<HTMLVideoElement>(null);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
@@ -25,6 +25,7 @@ const VideoRecorder: React.FC = () => {
         const recorder = new MediaRecorder(stream);
         recorder.ondataavailable = handleDataAvailable;
       }
+      setPermissionError(false);
     } catch (error) {
       // permission denied check
       if (error.name === "NotAllowedError") {
@@ -52,7 +53,7 @@ const VideoRecorder: React.FC = () => {
   if (permissionError) {
     return (
       <div className="permission-error">
-        Permission denied, please allow access to camera and microphone
+        Please allow access to camera and microphone
       </div>
     );
   }
