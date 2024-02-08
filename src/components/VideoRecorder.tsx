@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import "./VideoRecorder.css";
 import VideoPreview from "./VideoPreview";
 import Recorder from "./Recorder";
+import "./VideoRecorder.css";
 
 const VideoRecorder: React.FC = () => {
   const [recording, setRecording] = useState<boolean>(false);
